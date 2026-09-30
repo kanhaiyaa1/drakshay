@@ -1,7 +1,8 @@
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 
-export const publications = [
+export const publications: { title: string; journal: string; date: string; url?: string }[] = [
+  { title: "Simple Nephrectomy for Non-Functioning Kidney: An Institutional Experience with Non-Neoplastic and Incidentally Detected Neoplastic Lesions", journal: "International Journal of Surgical Pathology", date: "May 2025", url: "https://pubmed.ncbi.nlm.nih.gov/40415282/" },
   { title: "Screening of Peripheral Blood Film for Abnormalities in Leucocyte Morphology in Mild to Moderate COVID-19", journal: "International Journal of Science and Research", date: "May 2022" },
   { title: "M2G1G2 White Blood Cell Flag by Three-Part Automated Hematology Analyzer: A Hint to Dengue Infection", journal: "Journal of Laboratory Physicians", date: "Apr 2019" },
   { title: "Vimentin Positive Acantholytic Penile Squamous Cell Carcinoma with Rhabdoid Features", journal: "Journal of Cancer Research and Therapeutics", date: "Apr 2014" },
@@ -20,7 +21,7 @@ export default function Publications() {
       <div className="mx-auto max-w-6xl px-6">
         <SectionHeading id="publications-title" title="Publications" />
         <p className="-mt-6 mb-10 text-gray-600">
-          10 publications, approximately 74 citations (source: ResearchGate).
+          11 publications, with approximately 74 citations on ResearchGate.
         </p>
         <ol className="space-y-4">
           {publications.map((p, i) => (
@@ -37,6 +38,16 @@ export default function Publications() {
                 <p className="mt-1 text-sm text-gray-600">
                   <em>{p.journal}</em>, {p.date}
                 </p>
+                {p.url && (
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-2 inline-block text-sm font-semibold text-navy-500 underline-offset-4 transition-colors hover:text-navy hover:underline"
+                  >
+                    View on PubMed &rarr;
+                  </a>
+                )}
               </div>
             </Reveal>
           ))}

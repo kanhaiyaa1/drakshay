@@ -2,9 +2,8 @@
 
 import { useState, type FormEvent } from "react";
 
-// TODO: Generate a real access key at https://web3forms.com using aks23bali@gmail.com,
-// then replace this placeholder. The key is safe to expose in client-side code.
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+// Web3Forms access key. It is public by design and safe in client-side code.
+const WEB3FORMS_ACCESS_KEY = "1e07f05f-1136-428f-96ac-34c325cc7bc5";
 
 type Status = "idle" | "loading" | "success" | "error";
 type Errors = Partial<Record<"name" | "email" | "message", string>>;

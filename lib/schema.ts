@@ -137,6 +137,7 @@ export const schema = {
     ...publications.map((p) => ({
       "@type": "ScholarlyArticle",
       headline: p.title,
+      ...(p.url ? { url: p.url } : {}),
       author: { "@id": ID.person },
       datePublished: isoMonth(p.date),
       isPartOf: { "@type": "Periodical", name: p.journal },

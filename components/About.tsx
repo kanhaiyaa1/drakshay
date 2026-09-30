@@ -27,7 +27,7 @@ export default function About() {
           <p>
             His work as a practising pathologist informs how he teaches, and his
             teaching keeps him engaged with examination standards and UK
-            protocols. His academic record includes 10 publications with
+            protocols. His academic record includes 11 publications, with
             approximately 74 citations on ResearchGate, covering hematopathology,
             dermatopathology, surgical pathology and case reports.
           </p>
